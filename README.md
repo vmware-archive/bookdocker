@@ -8,8 +8,8 @@ Bookdocker does the following:
 1. Checks if Docker is installed
 1. Checks that you are in a `book` directory.
 1. Creates a custom container with the following:
-  1. Ruby v2.3.0
-  1. Your book's dependencies, including Bookbinder
+    1. Ruby v2.3.0
+    1. Your book's dependencies, including Bookbinder
 1. Runs Bookbinder in the Docker container
 
 ## Prerequisites
