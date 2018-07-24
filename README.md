@@ -1,7 +1,7 @@
 
 ## About Bookdocker
 
-Bookbinder on Docker (bookdocker) is a tool to make a Docker container to run Bookbinder in any Bookbinder book repository.
+Bookdocker is a tool to make a Docker container run Bookbinder in any Bookbinder `book` directory.
 
 Bookdocker does the following:
 
