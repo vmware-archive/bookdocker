@@ -1,7 +1,7 @@
 
 ## About Bookdocker
 
-Bookdocker is a tools that makes a Docker container that runs Bookbinder.
+Bookdocker is a tool that makes a Docker container that runs Bookbinder.
 
 Bookdocker does the following:
 
