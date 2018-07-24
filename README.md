@@ -6,22 +6,35 @@ Bookbinder on Docker (bookdocker) is a tool to make a Docker container to run Bo
 Bookdocker does the following:
 
 1. Checks if Docker is installed
-1. Checks that you are in a `book` directory
+1. Checks that you are in a `book` directory.
 1. Creates a custom container with the following:
   1. Ruby v2.3.0
   1. Your book's dependencies, including Bookbinder
-1. Runs Bookbinder in the docker container
+1. Runs Bookbinder in the Docker container
+
+## Prerequisites
+
+Before you can run bookdocker, you must have Docker installed and running.
+
+To install Docker, do the following:
+- To download Docker for Mac, see [Install Docker for Mac](https://docs.docker.com/docker-for-mac/install/).
+- To download Docker for Windows, see [Install Docker for Windows](https://docs.docker.com/docker-for-windows/install/).
+
+After you install Docker, start the application and wait for Docker to indicate that it is running successfully.
 
 ## How to Install
 
-1. Clone this repo.
+To install bookdocker, do the following:
+
+1. Clone the bookdocker repository.
    ```
    git clone https://github.com/pivotal-cf-experimental/bookdocker.git
    ```
 
-1. Copy the `bookdocker` file into your executable path. For example:
+1. Copy the `bookdocker` file into your executable path.
+   For example:
    ```
-   cp ~/workspace/bookdocker /usr/local/bin
+   cp ~/workspace/bookdocker/bookdocker /usr/local/bin
    ```
 
 ## How to Run
@@ -31,15 +44,19 @@ Once you installed bookdocker, do the following:
 1. Go to your book directory.
 
 1. Run bookdocker. Bookdocker takes the same commands and arguments that Bookbinder takes.
+   For example:
    ```
-   bookdocker watch MY-REPO
+   bookdocker watch my-content-repo
    ```
+   **Note:** The first time you run bookdocker in a new `book` repository, the bookdocker creates the Docker image and takes a long time to execute. Bookdocker is faster in following runs.
 
 ## Known Issues
 
-### Bookdocker is Slower Than Bookbinder on Mac
+### Bookdocker is Slow on Mac
 
-On large books, bookdocker is slow and may become unusable. To mitigate this issue, watch a single repo at a time. For example, run `bookdocker watch my-content-repo`.
+On large books, bookdocker is slow enough to become unusable on Mac machines. To mitigate this issue, you can do the following:
+- Watch a single repository at a time. For example, run `bookdocker watch my-content-repo`.
+- Watch small books that bind few content repos.
 
 ## License
 
