@@ -19,8 +19,8 @@ fi
 cat > /tmp/Dockerfile <<HERE
 FROM ruby:2.3
 
-ADD . /tmp/book
-WORKDIR /tmp/book
+ADD Gemfile* /tmp/
+WORKDIR /tmp
 RUN bundle install
 
 EXPOSE 4567
@@ -34,10 +34,7 @@ remote=${remote%*.git} # without the .git
 remote=${remote:1} # without the slash
 image_tag="bookbinder/${remote}"
 
-if ! docker images | grep --quiet "$image_tag"; then
-  # IF NOT: CREATE A CONTAINER FOR THAT BOOK *
-  docker build --file /tmp/Dockerfile . --tag "${image_tag}"
-fi
+docker build --file /tmp/Dockerfile . --tag "${image_tag}"
 
 # RUN THE BOOKBINDER CONTAINER FOR THIS BOOK *
 docker run -it -p 4567:4567 -p 35729:35729 --workdir "/workspace/${PWD##*/}" -v $(pwd)/..:/workspace  ${image_tag} "$@"
