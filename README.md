@@ -37,6 +37,26 @@ To install bookdocker, do the following:
    cp ~/workspace/bookdocker/bookdocker /usr/local/bin
    ```
 
+## How to Update
+
+To install updates to bookdocker, do the following:
+
+1. Go to your bookdocker repository. For example:
+   ```
+   cd ~/workspace/bookdocker
+   ```
+
+1. Pull changes.
+   ```
+   git pull
+   ```
+
+1. Copy the `bookdocker` file into your executable path.
+   For example:
+   ```
+   cp ~/workspace/bookdocker/bookdocker /usr/local/bin
+   ``` 
+
 ## How to Run
 
 Once you installed bookdocker, do the following:
