@@ -59,7 +59,7 @@ To install updates to bookdocker, do the following:
 
 ## How to Run
 
-Once you installed bookdocker, do the following:
+After you installed bookdocker, do the following:
 
 1. Go to your book directory.
 
@@ -69,6 +69,13 @@ Once you installed bookdocker, do the following:
    bookdocker watch my-content-repo
    ```
    **Note:** The first time you run bookdocker in a new `book` repository, the bookdocker creates the Docker image and takes a long time to execute. Bookdocker is faster in following runs.
+
+## Troubleshooting
+
+| Symptom | Solution |
+|---|---|
+| Error message `Get https://registry-1.docker.io/v2/library/ruby/manifests/2.3: unauthorized: incorrect username or password` | Enter `docker logout` and type original command again. |
+
 
 ## Known Issues
 
