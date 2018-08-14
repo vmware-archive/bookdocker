@@ -29,9 +29,9 @@ ENTRYPOINT ["bundle", "exec", "bookbinder"]
 HERE
 
 # CHECKS TO SEE IF YOU'VE ALREADY CREATED A CONTAINER FOR THIS BOOK (based on directory) *
-remote=$(git remote get-url origin | grep --only-match "/.*\.git") # remote with '/reponame.git'
+remote=$(git remote get-url origin)
+remote=${remote##*/} # remote with 'reponame.git'
 remote=${remote%*.git} # without the .git
-remote=${remote:1} # without the slash
 image_tag="bookbinder/${remote}"
 
 docker build --file /tmp/Dockerfile . --tag "${image_tag}"
