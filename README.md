@@ -82,7 +82,7 @@ After you installed bookdocker, do the following:
 ### Bookdocker is Slow on Mac
 
 On large books, bookdocker is slow enough to become unusable on Mac machines. To mitigate this issue, you can do the following:
-- Watch a single repository at a time. For example, run `bookdocker watch my-content-repo`.
+- Watch a single repository at a time. For example, run `bookdocker watch MY-CONTENT-REPO`.
 - Watch small books that bind few content repos.
 
 ## License
