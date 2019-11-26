@@ -66,7 +66,7 @@ After you installed bookdocker, do the following:
 1. Run bookdocker. Bookdocker takes the same commands and arguments that Bookbinder takes.
    For example:
    ```
-   bookdocker watch my-content-repo
+   bookdocker watch MY-CONTENT-REPO
    ```
    **Note:** The first time you run bookdocker in a new `book` repository, the bookdocker creates the Docker image and takes a long time to execute. Bookdocker is faster in following runs.
 
